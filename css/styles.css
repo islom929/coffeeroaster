@@ -54,7 +54,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Fraunces 9pt","New Times Roman" ,serif;
-  background-color: #fff;
+  background-color: var(--font-color-white);
 }
 
 img {
@@ -307,11 +307,9 @@ color: var(--font-color-black);
 .features__box {
 
   background-color: var(--font-color-black);
-border-radius: 10px 10px 0 0 ;
+border-radius: 10px 10px 10px 10px ;
 padding-top: 64px;
-padding-bottom: 28px;
-padding-left: 24px;
-padding-right: 24px;
+
 }
 
 .features-list__box {
@@ -340,6 +338,9 @@ text-align: center;
 font-family: var(--font-family-barlow);
 opacity: 0.8;
 margin: 0;
+padding-left: 24px;
+padding-right: 24px;
+padding-bottom: 28px;
 }
 
 
@@ -557,10 +558,21 @@ margin-top: 24px;
 }
 
 
+.footer__link:hover {
+  color: var(--font-color-white);
+}
 
 
 
 
+.footer-web__svg {
+  fill: var(--font-color-white);
+}
+
+.footer-web__item a:hover .footer-web__svg{
+  fill: var(--font-color-orange);
+
+  }
 
 
 
@@ -569,6 +581,11 @@ margin-top: 24px;
 /*--------------*/
 /* TODO ABOUT  */
 /*------------*/
+
+
+
+
+
 
 
 .about {
@@ -647,65 +664,54 @@ font-family: var(--font-family-barlow);
 }
 
 
-.features-list__box {
-  padding-bottom: 350px;
+
+
+
+
+/*--------------*/
+/* TODO SUBSCRIBE  */
+/*------------*/
+
+
+
+.plan {
+  background-image: url("../img/img-bg-plan-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  padding-top: 101px;
+  padding-bottom: 136px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
-.features__box {
-  background-color: var(--font-color-dark);
+
+.plan__box {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
-.features__title {
-  font-size: 32px;
-  line-height: 48px;
-  margin-top: 56px;
-
+.plan__title {
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 40px;
+font-family: var(--font-family-fraunces);
+color: var(--font-color-white);
+margin: 0;
+margin-bottom: 22px;
 }
 
-.features__text {
+.plan__text {
   font-size: 15px;
-line-height: 25px;
-width: 540px;
-margin-left: auto;
-margin-right: auto;
-margin-bottom: 35px;
+  line-height: 25px;
+font-family: var(--font-family-barlow);
+color: var(--font-color-white);
+opacity: 0.8;
+margin: 0;
 }
-
-
-.features__list {
-width: 83%;
-margin-left: auto;
-margin-right: auto;
-}
-
-
-
-
-.features__item {
-  padding-left: 181px;
-  padding-top: 40px;
-  padding-bottom: 40px;
-background-position:left 70px center ;
-}
-
-
-.features-item__title {
-  font-size: 24px;
-line-height: 32px;
-width: 255px;
-text-align: left;
-}
-
-.features-item__text {
-  font-size: 15px;
-line-height: 25px;
-opacity: 1;
-text-align: left;
-padding: 0;
-width: 344px;
-}
-
-
 
 
 
@@ -836,7 +842,180 @@ padding-top: 0;
 
 
 
+/* TODO FEATURES TABLET  */
+
+
+.features-list__box {
+  padding-bottom: 0;
+  position: static;
+}
+
+.features__box {
+  background-color: var(--font-color-dark);
+  position: relative;
+  padding-bottom: 300px;
+}
+
+.features__list {
+  top: 320px;
+  width: 85%;
+left: 57px;
+right: 57px;
+}
+
+
+.features__title {
+  font-size: 32px;
+  line-height: 48px;
+  margin-top: 56px;
+
+}
+
+.features__text {
+  font-size: 15px;
+line-height: 25px;
+width: 540px;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 35px;
+
+}
+
+
+
+
+.features__item {
+  padding-left: 181px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+background-position:left 70px center ;
+}
+
+
+.features-item__title {
+  font-size: 24px;
+line-height: 32px;
+width: 255px;
+text-align: left;
+}
+
+.features-item__text {
+  font-size: 15px;
+line-height: 25px;
+opacity: 1;
+text-align: left;
+padding: 0;
+width: 344px;
+}
+
+
+/* TODO WORK TABLET  */
+
+
+.work__box {
+display: block;
+width: 100%;
+}
+
+
+.work__title {
+  font-size: 24px;
+line-height: 32px;
+text-align: left;
+padding-bottom: 110px;
+}
+
+
+.work__list {
+  display: flex;
+ width: 100%;
+ position: relative;
+
+}
+
+
+.work__item{
+  width: 32%;
+  margin-left: 10px;
+  margin-bottom: 50px;
+}
+
+
+.work-item__title {
+  position: relative;
+  font-size: 28px;
+line-height: 32px;
+text-align: left;
+margin-top: 42px;
+margin-bottom: 38px;
+width: 200px;
+}
+
+.work__list::before{
+  content: "";
+  border: 1px solid var(--font-color-orange);
+  display: block;
+  width: 68%;
+  height: 1px;
+  position: absolute;
+  top: -40px;
+  left: 20px;
+}
+
+.work__item::before {
+  text-align: left;
+}
+
+.work-item__title::before {
+content: "";
+border: 2px solid #0E8784;
+background-color: var(--font-color-white);
+display: block;
+border-radius: 50%;
+width: 31px;
+height: 31px;
+position: absolute;
+top: -177px;
+}
+
+
+.work-item__text {
+  font-size: 15px;
+line-height: 25px;
+text-align: left;
+}
+
+
+.work__button {
+  font-size: 18px;
+line-height: 25px;
+}
+
+
+.footer {
+  margin-top: 94px;
+}
+
+
+.footer__list {
+  display: flex;
+  margin-left: -33px;
+}
+
+.footer__item {
+  margin-left: 33px;
+}
+
+
+
+
+/*--------------*/
 /* TODO ABOUT TABLET  */
+/*------------*/
+
+
+
+
 
 .about {
   background-image: url("../img/img-bg-hero-about-tablet.jpg");
@@ -860,6 +1039,7 @@ line-height: 40px;
   width: 398px;
   font-size: 15px;
   line-height: 25px;
+  opacity: 0.8;
 }
 
 
@@ -899,7 +1079,51 @@ line-height: 25px;
 width: 339px;
 }
 
+
+
+
+/*--------------*/
+/* TODO SUBSCRIBE TABLET */
+/*------------*/
+
+
+.plan {
+  background-image: url("../img/img-bg-plan-tablet.jpg");
+  padding-bottom: 126px;
+  padding-left: 58px;
+  padding-top: 126px;
 }
+
+.plan__box{
+
+  align-items: flex-start;
+  text-align: left;
+}
+
+.plan__title {
+  font-size: 48px;
+  line-height: 48px;
+}
+
+.plan__text {
+  width: 398px;
+  font-size: 15px;
+  line-height: 25px;
+  opacity: 0.8;
+}
+
+
+
+
+
+
+
+
+
+}
+
+
+
 
 
 
@@ -969,8 +1193,123 @@ text-align: center;
 }
 
 
+/* TODO FEATURES DESKTOP  */
 
+
+.features__box {
+width: 100%;
+padding-left: 85px;
+padding-right: 85px;
+padding-bottom: 230px;
+}
+
+.features__list {
+  display: flex;
+width: 96%;
+left: 85px;
+right: 85px;
+margin-left: auto;
+margin-right: auto;
+}
+
+.features__item {
+  width: 28%;
+  background-position: top 72px center;
+  padding-top: 200px;
+  padding-left: 48px;
+  padding-right: 48px;
+  padding-bottom: 48px;
+
+}
+
+.features__item:not(:last-child){
+  margin-right: 2.3%;
+}
+
+
+
+.features-item__title {
+  text-align: center;
+  width: 100%;
+}
+
+.features-item__text {
+  font-size: 16px;
+line-height: 26px;
+text-align: center;
+width: 100%;
+}
+
+
+/* TODO WORK DESKTOP  */
+
+.work__box {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.work-item__title {
+  font-size: 32px;
+line-height: 36px;
+
+}
+
+.work-item__text {
+  font-size: 16px;
+line-height: 26px;
+
+}
+
+.work__list {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+}
+
+.work__item{
+width: 31%;
+
+}
+
+
+/* TODO FOOTER DESKTOP  */
+
+.footer {
+ flex-direction: row;
+ align-items: center;
+ padding-top: 45px;
+ padding-bottom: 45px;
+ padding-left: 85px;
+ padding-right: 85px;
+
+}
+
+.footer__img {
+  margin-bottom: 0;
+  margin-right: 100px;
+
+}
+
+.footer__list {
+  margin-right: auto;
+}
+
+.footer-web__list {
+  margin: 0;
+}
+
+.footer__item {
+  margin-top: 0;
+  margin-bottom: 0;
+
+}
+
+/*--------------*/
 /* TODO ABOUT DESKTOP  */
+/*------------*/
+
 
 .about {
   background-image: url("../img/img-bg-hero-about-dessktop.jpg");
@@ -1030,5 +1369,41 @@ width: 339px;
 
 
 
+/*--------------*/
+/* TODO SUBSCRIBE DESKTOP */
+/*------------*/
+
+
+.plan {
+  background-image: url("../img/img-bg-plan-desktop.jpg");
+  padding-left: 85px;
+  padding-top: 134px;
+  padding-bottom: 134px;
 }
+
+.plan__title {
+  font-size: 72px;
+  line-height: 72px;
+}
+
+.plan__text {
+width: 445px;
+font-size: 16px;
+line-height: 26px;
+}
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
 
