@@ -1,6 +1,6 @@
-var elSiteHeader = document.querySelector(".header")
+const elSiteHeader = document.querySelector(".header");
 
-var elSiteHeaderToggle = elSiteHeader.querySelector(".header__button")
+const elSiteHeaderToggle = elSiteHeader.querySelector(".header__button");
 
 if(elSiteHeaderToggle){
   elSiteHeaderToggle.addEventListener("click", function(){
@@ -8,56 +8,19 @@ if(elSiteHeaderToggle){
   })
 }
 
+const elSiteInfo = document.querySelectorAll(".info__box");
+const elSiteInfoToggle = document.querySelectorAll(".info__button");
 
-
-var elSiteInfo = document.querySelectorAll(".info__box")
-
-var elSiteInfoToggle = elSiteInfo.querySelector(".info__button")
-
-if(elSiteInfoToggle){
-  elSiteInfoToggle.addEventListener("click", function(){
-    elSiteInfo.classList.toggle("info__box--active")
+elSiteInfoToggle.forEach(btn => {
+  btn.addEventListener('click', function() {
+    btn.closest('.info__box').classList.toggle('info__box--active');
   })
-}
+})
 
+const elSiteItem = document.querySelectorAll(".info__item");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+elSiteItem.forEach(item => {
+  item.addEventListener('click', function() {
+    item.classList.toggle('info__item--active');
+  })
+})
